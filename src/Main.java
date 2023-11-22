@@ -71,7 +71,7 @@ public class Main {
         String result = "";
         int i = 1;
         while (i < str.length()) {
-            if (str.charAt(i) == str.charAt(i-1)){
+            if (str.charAt(i) == str.charAt(i - 1)) {
                 result += str.charAt(i);
             }
             i++;
