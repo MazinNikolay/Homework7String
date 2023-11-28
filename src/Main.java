@@ -69,10 +69,12 @@ public class Main {
     public static void task8HardWork() {
         String str = "aabccddefgghiijjkk";
         String result = "";
-        int i = 1;
-        while (i < str.length()) {
-            if (str.charAt(i) == str.charAt(i - 1)) {
+        char addedSymbol = str.charAt(0);
+        int i = 0;
+        while (i < str.length() - 1) {
+            if ((str.charAt(i) == str.charAt(i + 1) && i == 0) || (str.charAt(i) == str.charAt(i + 1) && str.charAt(i + 1) != addedSymbol && i > 0)) {
                 result += str.charAt(i);
+                addedSymbol = str.charAt(i);
             }
             i++;
         }
